@@ -32,24 +32,12 @@ const Videosecsion = () => {
             console.log(e)
         }
     }
-    /*==================== SCROLL REVEAL ANIMATION ==================== 
-    const sr = ScrollReveal({
-        distance: '60px',
-        duration: 2800,
-        // reset: true,
-    })
 
-    sr.reveal(`
-     .video__content`, {
-        origin: 'right',
-        interval: 100,
-    })
-*/
 
     return (
         <div>
             <section className="video section">
-                <h2 className="section__title">Acá se trabaja</h2>
+                <h2 className="section__title"></h2>
 
                 <div className="video__container container">
                     <p className="video__description">

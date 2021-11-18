@@ -6,7 +6,7 @@ const products = [
         productType: 'Servicio',
         price: 4800,
         target: '$4800',
-        image: "/img/2.jpeg",
+        image:  "/img/Foto.jpg",
         description: 'Control de cucarachas,hormigas, pulgas y mas'
     },
     {
@@ -15,7 +15,7 @@ const products = [
         productType: 'Servicio',
         price: 4800,
         target: '$4800',
-        image: "/img/1.jpeg",
+        image: "/img/ratas.jpg",
         description: 'Control y monitoreo de roedores'
     },
     {
@@ -24,7 +24,7 @@ const products = [
         productType: 'Servicio',
         price: 0,
         target: 'A comvenir',
-        image: "/img/3.jpeg",
+        image: "/img/8.gif",
         description: 'Analisis fisicoquimico y bacteriologico'
     },
     {
@@ -33,7 +33,7 @@ const products = [
         productType: 'Servicio',
         price: 6000,
         target: '$6000',
-        image: "/img/4.jpeg",
+        image: "/img/sani.jpg",
         description: 'loremmmmmmmm zchcuxzhcuichxiccyizcxzyi'
     }
 

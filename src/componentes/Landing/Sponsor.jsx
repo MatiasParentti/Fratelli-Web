@@ -60,8 +60,12 @@ const Sponsor = () => {
             <section className="sponsor section">
                 <div className="sponsor__container container grid">
                     <div className="sponsor__content">
-
-                        <img src="/img/ucaba.png" alt="" className="sponsor__img" />
+                        <a href="https://ucaba.org.ar/" target="_blank">
+                        <img src="/img/ucaba.png" alt="" className="sponsor__img" /></a>
+                    </div>
+                    <div className="sponsor__content">
+                    <a href="https://www.casadeinsecticidas.com.ar/" target="_blank">
+                        <img src="https://www.casadeinsecticidas.com.ar/imagenes/logo.webp" alt="" className="sponsor__img" /></a>
                     </div>
                     <div className="sponsor__content">
 

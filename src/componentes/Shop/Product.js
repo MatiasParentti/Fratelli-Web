@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function Product({ product: { id, name, productType, price, image, description,target } }) {
+export default function Product({ product: { id, name, productType, price, image, description, target } }) {
     const classes = useStyles();
     const [{ basket }, dispatch] = useStateValue();
     const [expanded, setExpanded] = React.useState(false);
@@ -83,9 +83,11 @@ export default function Product({ product: { id, name, productType, price, image
                 subheader="Servicio"
             />
             <CardMedia
+                
                 className={classes.media}
                 image={image}
                 title="Desinsectacion"
+                
             />
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
