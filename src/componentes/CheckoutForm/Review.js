@@ -39,10 +39,10 @@ export default function Review() {
       </Typography>
       <List disablePadding>
         {basket.map((product) => (
-
           <ListItem className={classes.listItem} key={product.name}>
             <ListItemText primary={product.name} secondary={product.description} />
             <Typography variant="body2">{product.target}</Typography>
+            
           </ListItem>
         ))}
         <ListItem className={classes.listItem}>
@@ -60,8 +60,6 @@ export default function Review() {
           <Typography gutterBottom>{shippingData.firstName}  {shippingData.lastName}</Typography>
           <Typography gutterBottom>{shippingData.address1}  {shippingData.altura}</Typography>
           <Typography gutterBottom>{shippingData.city}</Typography>
-
-
         </Grid>
         <Grid item container direction="column" xs={12} sm={6}>
 

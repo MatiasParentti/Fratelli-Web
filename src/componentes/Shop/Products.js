@@ -21,7 +21,7 @@ export default function Products() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} >
-                        <Typography align='center' gutterBottom variant='h4'>Servicios</Typography>
+                        <Typography align='center' gutterBottom ><h2 className="section__title">Servicios</h2></Typography>
                     </Grid>
                     {
                         products.map(product => (

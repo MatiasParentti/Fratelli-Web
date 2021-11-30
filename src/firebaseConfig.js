@@ -16,7 +16,6 @@ export function firebaseConfig() {
 
     // Initialize Firebase
     const app = initializeApp(config);
-    console.log(app)
 }
 
 export function firebaseCrear(coleccion, objeto) {

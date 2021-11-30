@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useStateValue } from '../Shop/StateProvider'
 import { actionType } from '../Shop/reducer';
 import { firebaseCrear } from '../../firebaseConfig';
+import { useHistory } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,13 +25,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AddressForm({ handleNext }) {
 
+   
 
+    const historial = useHistory();
     const [{ basket, shippingData }, dispatch] = useStateValue();
     const classes = useStyles();
     const servicio = basket.map((item) => (item.name));
-
     const methods = useForm();
-  
+
 
     return (
         <>
@@ -50,7 +52,7 @@ export default function AddressForm({ handleNext }) {
                 })}>
                     <Grid container spacing={3}>
 
-                        <AddressInput required type="text" name="firstName" label="Nombre"/>
+                        <AddressInput required type="text" name="firstName" label="Nombre" />
                         <AddressInput required name="lastName" label="Apellido" />
                         <AddressInput required name="address1" label="Direccion" />
                         <AddressInput required name="altura" label="Altura" />
@@ -59,9 +61,9 @@ export default function AddressForm({ handleNext }) {
 
                     </Grid>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '2rem' }}>
-                        <Button className={classes.button} component={Link} to='/User'>Volver al carrito</Button>
+                        <Button className={classes.button} component={Link} to='/Cart'>Volver al carrito</Button>
                         <Button className={classes.button} type='submit' variant='contained' color='primary' >Siguiente</Button>
-                        
+
                     </div>
 
                 </form>

@@ -3,56 +3,73 @@
 
 <head>
   <meta charset="utf-8" />
-  <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="/public/img/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="keywords"
     content="fumigaciones,fumigacion, control de plagas, desinfecciones, plagas, desratizaciones, Limpieza de tanques">
+  <meta name="title" content="Fratelli Control de Plagas | Manejo Integral">
   <meta name="description"
-    content="Fratelli Control de Plagas. Contamos con habilitacion y certificados, brindamos servicios de fumigacion, desinfecciones, desratizaciones, limpieza de tanques">
+    content="Fratelli Control de Plagas. Contamos con habilitación y certificados, brindamos servicios de fumigación, desratizaciones, limpieza de tanques">
   <meta name="author" content="Fratelli Control de Plagas" />
-  <meta property="og:site_name" content="Fratelli Control de Plagas">
-  <meta property="og:site" content="https://fratellicontroldeplagas.com.ar/">
-  <meta property="og:title" content="Fratelli Control de Plagas">
-  <meta property="og:description"
-    content="Fratelli Control de Plagas. Contamos con habilitacion y certificados, brindamos servicios de fumigacion, desinfecciones, desratizaciones, limpieza de tanques">
-  <meta property="og:image" content="https://fratellicontroldeplagas.com.ar/assets/img/logo3.png">
+
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://fratellicontroldeplagas.com.ar/">
-  <meta property="og:type" content="article">
+  <meta property="og:title" content="Fratelli Control de Plagas | Manejo Integral">
+  <meta property="og:description"
+    content="Fratelli Control de Plagas. Contamos con habilitación y certificados, brindamos servicios de fumigación, desratizaciones, limpieza de tanques">
+  <meta property="og:image"
+  content="https://fratellicontroldeplagas.com.ar/public/img/logo3.png">
+  <meta property="og:site_name" content="Fratelli Control de Plagas | Manejo Integral">
+  <meta property="og:site" content="https://fratellicontroldeplagas.com.ar/">
   <meta property="og:image:alt" content="Fratelli">
-  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-  <link rel="manifest" href="/public/manifest.json" />
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDX9RE6L3V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-HDX9RE6L3V');
+  </script>
+  <script type='application/ld+json'>
+    {
+      "@context": "http://www.schema.org",
+      "@type": "ServicioProfesional",
+      "name": "Fratelli Control de Plagas",
+      "url": "www.fratellicontroldeplagas.com.ar",
+      "sameAs": [
+        "fratellicontroldeplagas.com.ar"
+      ],
+      "logo": "data:image/png;base64,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",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPWLVwKMqTUaFgPWzOV5Pu45RjSLtTwUwMgxxmFgFc7lH2U59SFyHl2tfC3g_w7aUnhhQ&usqp=CAU",
+      "description": "Fratelli Control de Plagas. Contamos con habilitacion y certificados, brindamos servicios de fumigacion, desinfecciones, desratizaciones, limpieza de tanques",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "CABA",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "Argentina"
+      },
+      "openingHours": "Mo, Tu, We, Th, Fr, Sa 09:00-17:00",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "1537872322",
+        "contactType": "general"
+      }
+    }
+     </script>
+
+  <link rel="canonical" href="https://fratellicontroldeplagas.com.ar/" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-  <title>Fratelli Control de Plagas</title>
+  <title>Fratelli Control de Plagas | Manejo Integral</title>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
 </body>
 
 </html>

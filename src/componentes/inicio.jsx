@@ -10,7 +10,7 @@ import Nosotros from "./Landing/Nosotros";
 import Home from "./Landing/Home"
 import Navmenu from "./Landing/Navmenu";
 import './css/style.css';
-import Scroll from "./Landing/Scroll";
+
 
 
 const Inicio = () => {

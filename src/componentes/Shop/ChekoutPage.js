@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import ChekoutCard from './ChekoutCard';
 import { Typography } from '@material-ui/core';
 import Total from './Total';
-import {useStateValue} from './StateProvider'
+import { useStateValue } from './StateProvider'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ChekoutPage() {
     const classes = useStyles();
-    const [{basket}, dispatch] = useStateValue();
+    const [{ basket }, dispatch] = useStateValue();
     function FormRow() {
         return (
             <React.Fragment>
@@ -38,7 +38,7 @@ export default function ChekoutPage() {
                 <div className={classes.root}>
                     <Grid container spacing={3}>
                         <Grid item xs={12} >
-                            <Typography align='center' gutterBottom variant='h4'>Compras</Typography>
+                            <Typography align='center' gutterBottom ><h2 className="section__title">Compras</h2></Typography>
                         </Grid>
 
                         <Grid item xs={12} sm={8} md={9} container spacing={2} >

@@ -13,7 +13,10 @@ const useStyles = makeStyles((theme) => ({
         height: '20vh',
     },
     button: {
-        marginTop: '0.5rem'
+        
+    },
+    h6: {
+     
     }
 
 }));
@@ -26,11 +29,9 @@ const Total = () => {
     return (
 
         <div className={classes.root}>
-            <h5>Total: {basket?.length}
-            </h5>
-            <h5>{accounting.formatMoney(getBasketTotal(basket), '$')}
-            </h5>
-            <Link to={basket?.length > 0 ? '/Checkout' : '/Servicios'}><a className="button btn-total" >Comprar</a></Link>
+            <h6 className={classes.h6} >Total: {accounting.formatMoney(getBasketTotal(basket), '$')}
+            </h6>
+            <Link to='/Checkout'><a className="button btn-total" >Comprar</a></Link>
         </div >
 
 

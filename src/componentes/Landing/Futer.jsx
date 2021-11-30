@@ -13,7 +13,7 @@ const Futer = () => {
 
         <div>
 
-            <footer className="footer section">
+            <footer className="footer section" id="footer">
                 <div className="footer__container container grid">
                     <div className="footer__content grid">
                         <div className="footer__data">
@@ -31,8 +31,9 @@ const Futer = () => {
                                 <a href="https://www.instagram.com/fratellicontroldeplagas" rel="noreferrer" target="_blank" className="footer__social">
                                     <i className="ri-instagram-fill"></i>
                                 </a>
-
                             </div>
+                            <p className="footer__description"><i className="bi bi-phone-fill footer__social"></i><i>15-37872322</i>
+                            </p>
                         </div>
 
                         <div className="footer__data">

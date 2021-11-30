@@ -37,7 +37,7 @@ const Videosecsion = () => {
     return (
         <div>
             <section className="video section">
-                <h2 className="section__title"></h2>
+                <h2 className="section__title">Soluciones integrales</h2>
 
                 <div className="video__container container">
                     <p className="video__description">
