@@ -10,43 +10,69 @@ import Nosotros from "./Landing/Nosotros";
 import Home from "./Landing/Home"
 import Navmenu from "./Landing/Navmenu";
 import './css/style.css';
-
-
+import { useEffect } from "react";
+import ScrollReveal from 'scrollreveal';
 
 const Inicio = () => {
 
 
+    const sr = ScrollReveal({
+        distance: '60px',
+        duration: 2800,
+        reset: false
+      })
+  
+      useEffect(() => {
+      sr.reveal(`.home__data, .home__social-link, .home__info
+          `, {
+        origin: 'top',
+        interval: 100,
+      })
+  /*==================== REMOVE MENU MOBILE ====================
+      sr.reveal(`.about__data, 
+           .video__description,
+           .subscribe__description`, {
+        origin: 'left',
+      })
+  
+      sr.reveal(`.about__img-overlay, 
+           .video__content,
+           .subscribe__form, .accordion`, {
+        origin: 'right',
+        interval: 100,
+      })
+      */
+    }, [])
 
-
-
+    
 
     return (
 
 
         <React.Fragment>
 
-       
-<Navmenu></Navmenu>
-                
-                
-                    <Home></Home>
 
-                    <Nosotros></Nosotros>
+            <Navmenu></Navmenu>
 
-                    <Servicios></Servicios>
 
-                    <Headerx></Headerx>
+            <Home></Home>
 
-                    <Videosecsion ></Videosecsion >
+            <Nosotros></Nosotros>
 
-                    <Preguntas></Preguntas>
+            <Servicios></Servicios>
 
-                    <Sponsor></Sponsor>
+            <Headerx></Headerx>
 
-             
-                    <Futer></Futer>
+            <Videosecsion ></Videosecsion >
 
-            </React.Fragment>
+            <Preguntas></Preguntas>
+
+            <Sponsor></Sponsor>
+
+
+            <Futer></Futer>
+
+        </React.Fragment>
     )
 }
 

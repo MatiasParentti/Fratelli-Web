@@ -10,13 +10,13 @@ const Home = () => {
 
             <section className="home" id="home">
 
-                <img src="/img/abstract-leafs@3000x2000px (1).jpg" alt="back" className="home__img" />
+                <img src="/img/homei.jpg" alt="back" className="home__img" />
 
                 <div className="home__container container grid">
                     <div className="home__data">
                         <span className="home__data-subtitle">Manejo integral</span>
                         <h1 className="home__data-title">FRATELLI<br></br> Control de <b>plagas <br></br></b></h1>
-                        {path !== '/' ? (<Link to='/'><a className="button">Saber mas</a></Link>) : (<a href="#about" className="button">Saber mas</a>)}
+                        {path !== '/' ? (<Link to='/'><a className="button">Saber mas</a></Link>) : (<a href="#about" className="button btn__color">Saber mas</a>)}
 
 
                     </div>
@@ -36,7 +36,7 @@ const Home = () => {
                     <div className="home__info">
                         <div>
                             <span className="home__info-title">Asesoriamiento gratis</span>
-                            <a target='_blank' rel="noreferrer" href="https://api.whatsapp.com/send?phone=+5491137872322&text=Hola!%20quisiera%20hacer%20una%20consulta" className="button button--flex button--link home__info-button">
+                            <a target='_blank' rel="noreferrer" href="https://api.whatsapp.com/send?phone=+5491137872322&text=Hola!%20quisiera%20hacer%20una%20consulta" className=" button--flex  home__info-button btn__color">
                                 Mas<i className="ri-arrow-right-line"></i>
                             </a>
                         </div>

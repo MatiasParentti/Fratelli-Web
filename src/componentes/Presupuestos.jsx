@@ -23,11 +23,15 @@ const useStyles = makeStyles((theme) => ({
   },
   buttons: {
     borderBottom: "2px solid green",
-    width: "100%",
+    width: "90%",
+  },
+  typo: {
+    letterSpacing: "2px ",
     fontSize: "1.25rem",
-    backgroundColor: "whitesmoke",
+    color: "hsl(197,36%,9%)",
   },
 }));
+
 
 const Presupuestos = (props) => {
   const sr = ScrollReveal({
@@ -43,6 +47,7 @@ const Presupuestos = (props) => {
   ;
   const changePresupuesto = (e) => {
     setPresu(e.target.id);
+
     sr.reveal(`.hola`, {
       origin: 'top',
       interval: 100,
@@ -102,14 +107,18 @@ const Presupuestos = (props) => {
               </Typography>
             </Grid>
             <Grid
+
               align="center" item xs={12} sm={6} md={4} lg={4}>
+
               <Button
+
 
                 className={classes.buttons}>
                 <Typography
-                  id="Empresas"
+                  className={classes.typo}
                   onClick={changePresupuesto}
                   align="center"
+                  id="Empresas"
                 >
                   Empresas
                 </Typography>
@@ -119,6 +128,7 @@ const Presupuestos = (props) => {
               <Button className={classes.buttons}>
                 {" "}
                 <Typography
+                className={classes.typo}
                   id="Gastronómicos"
                   onClick={changePresupuesto}
                   align="center"
@@ -131,6 +141,7 @@ const Presupuestos = (props) => {
               <Button className={classes.buttons}>
                 {" "}
                 <Typography
+                className={classes.typo}
                   id="Consorcios"
                   onClick={changePresupuesto}
                   align="center"
@@ -143,6 +154,7 @@ const Presupuestos = (props) => {
               <Button className={classes.buttons}>
                 {" "}
                 <Typography
+                 className={classes.typo}
                   id="Centros educativos"
                   onClick={changePresupuesto}
                   align="center"
@@ -155,6 +167,7 @@ const Presupuestos = (props) => {
               <Button className={classes.buttons}>
                 {" "}
                 <Typography
+                className={classes.typo}
                   id="Hoteles"
                   onClick={changePresupuesto}
                   align="center"
@@ -168,6 +181,7 @@ const Presupuestos = (props) => {
 
 
                 <Typography
+                className={classes.typo}
                   id="Hogares"
                   onClick={changePresupuesto}
                   align="center"

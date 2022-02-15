@@ -6,7 +6,10 @@ const Servicios = () => {
 
     return (
 
+        <React.Fragment>
+      
         <section className="discover section" id="discover">
+      
             <h2 className="section__title">Servicios</h2>
 
 
@@ -40,15 +43,13 @@ const Servicios = () => {
                         <h2 className="discover__title">Limpieza de <br></br> tanques</h2>
                         <span className="discover__description">Analisis fisicoquimico y bacteriologico</span>
                         <Link to='/Presupuestos'><a className="button discover__button">Pedir Presupuesto</a></Link>
-                   
-
                     </div>
                 </div>
             </div>
 
         </section>
 
-
+        </React.Fragment>
     )
 
 

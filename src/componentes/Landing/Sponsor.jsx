@@ -73,6 +73,7 @@ const Sponsor = () => {
                     </div>
 
                 </div>
+       
             </section>
 
 
