@@ -5,13 +5,13 @@ import { firebaseConfig } from "./firebaseConfig";
 import User from "./componentes/User";
 import Servicioss from "./componentes/Servicioss";
 import Pay from './componentes/Pay';
-import Scroll from "./componentes/Landing/Scroll";
+
 import Presupuestos from "./componentes/Presupuestos";
 import { useStateValue } from './componentes/Shop/StateProvider'
 import { useState, useEffect } from "react";
 import AuthenticatedRoute from './AuthenticatedRoute';
-
-
+import ScrollToTop from './ScrollToTop';
+import Scroll from "./componentes/Landing/Scroll";
 
 
 firebaseConfig();
@@ -38,36 +38,35 @@ function App() {
     <React.Fragment>
 
       <Router>
+        <ScrollToTop />
+          <Switch>
 
-        <Switch>
+            <Route exact path='/' component={Inicio}>
 
-          <Route exact path='/' component={Inicio}>
+            </Route>
 
-          </Route>
+            <Route exact path='/Cart' component={User}>
 
-          <Route exact path='/Cart' component={User}>
+            </Route>
+            <Route exact path='/Servicios' component={Servicioss}>
 
-          </Route>
-          <Route exact path='/Servicios' component={Servicioss}>
+            </Route>
+            <Route exact path='/Presupuestos' component={Presupuestos}>
 
-          </Route>
-          <Route exact path='/Presupuestos' component={Presupuestos}>
+            </Route>
 
-          </Route>
+            <AuthenticatedRoute
+              path='/Checkout'
+              component={Pay}
+              appProps={{ isAuthenticated }}
+            />
 
-          <AuthenticatedRoute
-            path='/Checkout'
-            component={Pay}
-            appProps={{ isAuthenticated }}
-          />
-
-        </Switch>
-
+          </Switch>
+       
       </Router>
 
-
       <Scroll></Scroll>
-
+      
     </React.Fragment>
 
   );

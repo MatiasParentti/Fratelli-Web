@@ -16,6 +16,8 @@ import PresupuestoCentrosEdu from './Presupuestos/PresupuestoCentrosEdu';
 import ScrollReveal from 'scrollreveal';
 import { Icon } from '@iconify/react';
 
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -34,29 +36,33 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Presupuestos = (props) => {
-  const sr = ScrollReveal({
-    distance: '60px',
-    duration: 2800,
-    // reset: true,
-  })
+
+ 
+
 
 
 
   const classes = useStyles();
   const [presu, setPresu] = useState(" ");
   ;
+  // const sr = ScrollReveal({
+  // distance: '60px',
+  // duration: 2800,
+  //reset: false
+  //})
+  const sr = ScrollReveal({
+    distance: '30px',
+    duration:  1500,
+    reset: false
+  })
   const changePresupuesto = (e) => {
     setPresu(e.target.id);
-
-    sr.reveal(`.hola`, {
-      origin: 'top',
-      interval: 100,
-    })
+    sr.reveal('.hola', { origin: 'left', interval: 100, delay: 50 });
   };
 
   function LayoutContendio(props) {
     switch (props.contenido) {
-      case "Empresas": return <PresupuestoEmpresas></PresupuestoEmpresas>; break;
+      case "Empresas": return <PresupuestoEmpresas ></PresupuestoEmpresas>; break;
       case "Gastronómicos": return <PresupuestoGastronomicos></PresupuestoGastronomicos>; break;
       case "Consorcios": return <PresupuestoConsorcios></PresupuestoConsorcios>; break;
       case "Centros educativos": return <PresupuestoCentrosEdu></PresupuestoCentrosEdu>; break;
@@ -128,7 +134,7 @@ const Presupuestos = (props) => {
               <Button className={classes.buttons}>
                 {" "}
                 <Typography
-                className={classes.typo}
+                  className={classes.typo}
                   id="Gastronómicos"
                   onClick={changePresupuesto}
                   align="center"
@@ -141,7 +147,7 @@ const Presupuestos = (props) => {
               <Button className={classes.buttons}>
                 {" "}
                 <Typography
-                className={classes.typo}
+                  className={classes.typo}
                   id="Consorcios"
                   onClick={changePresupuesto}
                   align="center"
@@ -154,7 +160,7 @@ const Presupuestos = (props) => {
               <Button className={classes.buttons}>
                 {" "}
                 <Typography
-                 className={classes.typo}
+                  className={classes.typo}
                   id="Centros educativos"
                   onClick={changePresupuesto}
                   align="center"
@@ -167,7 +173,7 @@ const Presupuestos = (props) => {
               <Button className={classes.buttons}>
                 {" "}
                 <Typography
-                className={classes.typo}
+                  className={classes.typo}
                   id="Hoteles"
                   onClick={changePresupuesto}
                   align="center"
@@ -181,7 +187,7 @@ const Presupuestos = (props) => {
 
 
                 <Typography
-                className={classes.typo}
+                  className={classes.typo}
                   id="Hogares"
                   onClick={changePresupuesto}
                   align="center"
@@ -210,6 +216,7 @@ const Presupuestos = (props) => {
           <LayoutContendio contenido={presu} />
         </div>
       </div>
+
       <Futer></Futer>
     </React.Fragment>
   );
