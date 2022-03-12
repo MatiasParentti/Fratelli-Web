@@ -1,23 +1,11 @@
 import React from "react";
-import { useEffect } from "react";
-import ScrollReveal from 'scrollreveal';
+
 
 const Nosotros = () => {
 
-    const sr = ScrollReveal({
-        distance: '30px',
-        duration: 2800,
-        reset: false
-    })
-
-    useEffect(() => {
-        sr.reveal('.about__data', {origin: 'left' ,interval: 100, delay: 400});
-        sr.reveal('.about__img-overlay', {origin: 'right' ,interval: 100, delay: 400});
-    }, [])
 
 
-
-    return (
+   return (
 
 
         <React.Fragment>

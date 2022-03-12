@@ -1,20 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import ScrollReveal from 'scrollreveal';
+
 
 
 const Servicios = () => {
-
-    const sr = ScrollReveal({
-        distance: '60px',
-        duration: 2800,
-        reset: false
-    })
-
-    useEffect(() => {
-        sr.reveal('.discover__card', { origin: 'left', interval: 100, delay: 400 });
-    }, [])
 
 
 

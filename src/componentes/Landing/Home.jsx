@@ -15,11 +15,11 @@ const Home = () => {
     })
 
     useEffect(() => {
-
-        sr.reveal('.home__data', {origin: 'top' ,interval: 100, delay: 400});
-        sr.reveal('.home__social-link', { origin: 'top',interval: 100, delay: 200 });
-        sr.reveal('.home__info', {origin: 'top' ,interval: 100, delay: 400 });
-     
+        sr.reveal('.home__social-link', { origin: 'top', interval: 100, delay: 200 });
+        sr.reveal('.home__info, .discover__card, .home__data  , .section__title', { origin: 'top', interval: 100, delay: 400 })
+        sr.reveal('.experience__data, .accordion', { origin: 'bottom', interval: 100, delay: 400 });
+        sr.reveal('.about__img-overlay', { origin: 'right', interval: 100, delay: 400 });
+        sr.reveal('.experience__img, .video__container, .about__description', { origin: 'left', interval: 100, delay: 400 });
     }, [])
 
 

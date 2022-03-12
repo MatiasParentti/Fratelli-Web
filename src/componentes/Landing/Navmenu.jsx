@@ -7,12 +7,20 @@ import { ShoppingCart } from '@material-ui/icons';
 import { Badge } from '@material-ui/core';
 import { useStateValue } from '../Shop/StateProvider';
 import { actionType } from "../Shop/reducer";
+import { makeStyles } from '@material-ui/core/styles';
 
+
+
+const useStyles = makeStyles((theme) => ({
+    cart: {
+        color: 'hsl(197,36%,9%)',
+    }
+}));
 
 const Navmenu = (props) => {
     const [{ basket, user }, dispatch] = useStateValue();
     const historial = useHistory();
-
+    const classes = useStyles();
     const [path, setpath] = useState(window.location.pathname)
     const [show, setShow] = useState('nav__menu')
     const [btn, setBtn] = useState('ri-function-line')
@@ -114,7 +122,7 @@ const Navmenu = (props) => {
                 </div>
 
                 <div > <Link to={'/Cart'}> <IconButton color="inherit" aria-label="show cart items">
-                    <Badge badgeContent={basket?.length} color='secondary'><ShoppingCart fontSize='medium' color='primary'></ShoppingCart>
+                    <Badge badgeContent={basket?.length} color='secondary'><ShoppingCart className={classes.cart} fontSize='medium' color='primary'></ShoppingCart>
                     </Badge>
                 </IconButton></Link> </div>
 

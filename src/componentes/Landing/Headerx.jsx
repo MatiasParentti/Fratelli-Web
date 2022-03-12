@@ -1,20 +1,8 @@
 import React from "react";
-import { useEffect } from "react";
-import ScrollReveal from 'scrollreveal';
+
 
 
 const Headerx = () => {
-
-    const sr = ScrollReveal({
-        distance: '60px',
-        duration: 2800,
-        reset: false
-    })
-
-    useEffect(() => {
-        sr.reveal(`.section__title, .experience__overlay`, {origin: 'left' ,interval: 100, delay: 400});
-        sr.reveal('.experience__data', {origin: 'right' ,interval: 100, delay: 400});
-    }, [])
 
 return (
 

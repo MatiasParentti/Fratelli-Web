@@ -1,26 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-import { useEffect } from "react";
-import ScrollReveal from 'scrollreveal';
+
 
 
 const Videosecsion = () => {
     
-        const sr = ScrollReveal({
-            distance: '60px',
-            duration: 2800,
-            reset: false
-        })
     
-        useEffect(() => {
-            sr.reveal(`.section__title`, {origin: 'left' ,interval: 100, delay: 400});
-            sr.reveal('.video__container', {origin: 'right' ,interval: 100, delay: 400});
-        }, [])
-
-
-
-
     /*==================== VIDEO ==================== */
 
     const [icono, setIcono] = useState('ri-play-line  video__button-icon');
