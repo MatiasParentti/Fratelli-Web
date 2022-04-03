@@ -33,7 +33,15 @@ const PresupuestoEmpresas = () => {
 
   const onSubmit = (data, e) => {
     e.preventDefault();
-    firebaseCrear('PresupuestoEmpresas', data)
+    const d = new Date();
+    const date = {
+      date: d.toString()
+    };
+    const myData = {
+      ...data,
+      ...date
+    };
+    firebaseCrear('PresupuestoEmpresas', myData)
     reset()
     return false;
   }

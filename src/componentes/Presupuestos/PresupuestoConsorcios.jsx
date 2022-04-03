@@ -33,8 +33,15 @@ const PresupuestoConsorcios = () => {
 
   const onSubmit = (data, e) => {
     e.preventDefault();
-    firebaseCrear('PresupuestoConsorcios', data)
-
+    const d = new Date();
+    const date = {
+      date: d.toString()
+    };
+    const myData = {
+      ...data,
+      ...date
+    };
+    firebaseCrear('PresupuestoConsorcios', myData)
     reset()
     return false;
   }
