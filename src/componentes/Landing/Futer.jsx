@@ -12,6 +12,7 @@ const Futer = () => {
 
 
         <div>
+  
 
             <footer className="footer section" id="footer">
                 <div className="footer__container container grid">
@@ -47,7 +48,7 @@ const Futer = () => {
 
                                 </li>
                                 <li className="footer__item">
-                                    {path !== '/' ? (<Link to='/'><a className="footer__link">Preguntas Frecuentes</a></Link>) : (<a href="#place" className="footer__link">Preguntas Frecuentes</a>)}
+                                    {path !== '/' ? (<Link to='/'><a className="footer__link">Preguntas Frecuentes</a></Link>) : (<a href="#faq" className="footer__link">Preguntas Frecuentes</a>)}
 
                                 </li>
                             </ul>
@@ -57,15 +58,16 @@ const Futer = () => {
                     </div>
 
                     <div className="footer__rights">
-                        <p className="footer__copy">&#169; 2020 Fratelli Control de Plagas.All rigths reserved.</p>
+                        <p className="footer__copy">&#169; 2020 Fratelli Control de Plagas.</p>
                         <div className="footer__terms">
                             <a  className="footer__terms-link"></a>
                             <a href="#" className="footer__terms-link"></a>
                         </div>
                     </div>
                 </div>
+              
             </footer>
-
+      
 
         </div>
 

@@ -36,7 +36,15 @@ const PresupuestoHogares = () => {
 
   const onSubmit = (data, e) => {
     e.preventDefault();
-    firebaseCrear('PresupuestoHogares', data)
+    const d = new Date();
+    const date = {
+      date: d.toString()
+    };
+    const myData = {
+      ...data,
+      ...date
+    };
+    firebaseCrear('PresupuestoHogares', myData)
     reset()
     return false;
   }

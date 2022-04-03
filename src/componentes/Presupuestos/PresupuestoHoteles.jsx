@@ -39,7 +39,15 @@ const PresupuestoHoteles = () => {
   
   const onSubmit = (data, e) => {
     e.preventDefault();
-    firebaseCrear('PresupuestoHoteles', data)
+    const d = new Date();
+    const date = {
+      date: d.toString()
+    };
+    const myData = {
+      ...data,
+      ...date
+    };
+    firebaseCrear('PresupuestoHoteles', myData)
     reset()
     return false;
   }

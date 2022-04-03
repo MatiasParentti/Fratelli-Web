@@ -31,7 +31,7 @@ const Total = () => {
         <div className={classes.root}>
             <h6 className={classes.h6} >Total: {accounting.formatMoney(getBasketTotal(basket), '$')}
             </h6>
-            <Link to='/Checkout'><a className="button btn-total" >Comprar</a></Link>
+            <Link to={basket?.length >= 1 ? '/Checkout' : '/Servicios'}><a className="button btn-total" >Comprar</a></Link>
         </div >
 
 

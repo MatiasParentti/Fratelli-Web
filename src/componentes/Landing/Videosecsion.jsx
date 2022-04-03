@@ -1,9 +1,12 @@
 import React from "react";
 import { useState } from "react";
-//import ScrollReveal from "scrollreveal";
+
+
+
 
 const Videosecsion = () => {
-
+    
+    
     /*==================== VIDEO ==================== */
 
     const [icono, setIcono] = useState('ri-play-line  video__button-icon');

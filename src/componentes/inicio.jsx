@@ -12,42 +12,35 @@ import Navmenu from "./Landing/Navmenu";
 import './css/style.css';
 
 
-
 const Inicio = () => {
 
 
+  return (
 
 
+    <React.Fragment>
 
+      <Navmenu></Navmenu>
 
-    return (
+      <Home></Home>
 
+      <Nosotros></Nosotros>
 
-        <React.Fragment>
+      <Servicios></Servicios>
 
-       
-<Navmenu></Navmenu>
-                
-                
-                    <Home></Home>
+      <Headerx></Headerx>
 
-                    <Nosotros></Nosotros>
+      <Videosecsion ></Videosecsion >
 
-                    <Servicios></Servicios>
+      <Preguntas></Preguntas>
 
-                    <Headerx></Headerx>
+      <Sponsor></Sponsor>
 
-                    <Videosecsion ></Videosecsion >
+      <Futer></Futer>
+      
 
-                    <Preguntas></Preguntas>
-
-                    <Sponsor></Sponsor>
-
-             
-                    <Futer></Futer>
-
-            </React.Fragment>
-    )
+    </React.Fragment>
+  )
 }
 
 export default Inicio;

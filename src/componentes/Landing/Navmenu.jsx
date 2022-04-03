@@ -1,52 +1,66 @@
 import React from "react";
 import { Link, useHistory } from 'react-router-dom';
-
+import { useEffect } from "react";
 import { useState } from "react";
 import IconButton from '@material-ui/core/IconButton';
 import { ShoppingCart } from '@material-ui/icons';
 import { Badge } from '@material-ui/core';
 import { useStateValue } from '../Shop/StateProvider';
 import { actionType } from "../Shop/reducer";
+import { makeStyles } from '@material-ui/core/styles';
 
+
+
+const useStyles = makeStyles((theme) => ({
+    cart: {
+        color: 'hsl(197,36%,9%)',
+    }
+}));
 
 const Navmenu = (props) => {
     const [{ basket, user }, dispatch] = useStateValue();
     const historial = useHistory();
-
+    const classes = useStyles();
     const [path, setpath] = useState(window.location.pathname)
-    const [show, setShow] = useState('nav__menu ')
+    const [show, setShow] = useState('nav__menu')
+    const [btn, setBtn] = useState('ri-function-line')
     const [header, setHeader] = useState('header')
 
-    /*===== MENU SHOW =====*/
+
+    useEffect(() => {
+        /*==================== REMOVE MENU MOBILE ====================*/
+        const navLink = document.querySelectorAll('.nav__link')
+
+        function linkAction() {
+            /*Remove menu mobile*/
+            setShow('nav__menu')
+            setBtn('ri-function-line')
+        }
+        navLink.forEach(n => n.addEventListener('click', linkAction))
+
+
+        function scrollHeader() {
+            if (this.scrollY >= 100) {
+                setHeader('header scroll-header')
+            } else {
+                setHeader('header')
+            }
+        }
+        window.addEventListener('scroll', scrollHeader)
+
+
+    }, [])
 
     const menuShow = () => {
-        setShow('nav__menu show-menu')
+        if (btn === 'ri-function-line') {
+            setShow('nav__menu show-menu')
+            setBtn('ri-close-line')
+        } else {
+            setShow('nav__menu')
+            setBtn('ri-function-line')
+        }
     }
-    /*===== MENU HIDDEN =====*/
 
-    const menuHidden = () => {
-        setShow('nav__menu ')
-
-    }
-
-    /*==================== REMOVE MENU MOBILE ====================*/
-    const navLink = document.querySelectorAll('.nav__link')
-
-    function linkAction() {
-        const navMenu = document.getElementById('nav-menu')
-        navMenu.classList.remove('show-menu')
-    }
-    navLink.forEach(n => n.addEventListener('click', linkAction))
-
-
-    function scrollHeader() {
-        if (this.scrollY >= 100){
-            setHeader('header scroll-header')
-        }else{
-            setHeader('header')
-        } 
-    }
-    window.addEventListener('scroll', scrollHeader)
 
     return (
 
@@ -92,9 +106,9 @@ const Navmenu = (props) => {
                             <Link to='/Servicios'><div className="nav__link">Servicios</div></Link>
                         </li>
                         <li className="nav__item">
-                            
-                                        <a href="#footer" className="nav__link">Contacto</a>
-                            
+
+                            <a href="#footer" className="nav__link">Contacto</a>
+
                         </li>
 
                     </ul>
@@ -104,16 +118,16 @@ const Navmenu = (props) => {
 
                     </div>
 
-                    <i onClick={menuHidden} className="ri-close-line nav__close" id="nav-close"></i>
+
                 </div>
 
                 <div > <Link to={'/Cart'}> <IconButton color="inherit" aria-label="show cart items">
-                    <Badge badgeContent={basket?.length} color='secondary'><ShoppingCart fontSize='medium' color='primary'></ShoppingCart>
+                    <Badge badgeContent={basket?.length} color='secondary'><ShoppingCart className={classes.cart} fontSize='medium' color='primary'></ShoppingCart>
                     </Badge>
                 </IconButton></Link> </div>
 
                 <div onClick={menuShow} className="nav__toggle" id="nav-toggle">
-                    <i className="ri-function-line"></i>
+                    <i className={btn}></i>
                 </div>
 
             </nav>

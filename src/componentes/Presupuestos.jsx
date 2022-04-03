@@ -16,6 +16,8 @@ import PresupuestoCentrosEdu from './Presupuestos/PresupuestoCentrosEdu';
 import ScrollReveal from 'scrollreveal';
 import { Icon } from '@iconify/react';
 
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -23,35 +25,44 @@ const useStyles = makeStyles((theme) => ({
   },
   buttons: {
     borderBottom: "2px solid green",
-    width: "100%",
+    width: "90%",
+  },
+  typo: {
+    letterSpacing: "2px ",
     fontSize: "1.25rem",
-    backgroundColor: "whitesmoke",
+    color: "hsl(197,36%,9%)",
   },
 }));
 
+
 const Presupuestos = (props) => {
-  const sr = ScrollReveal({
-    distance: '60px',
-    duration: 2800,
-    // reset: true,
-  })
+
+ 
+
 
 
 
   const classes = useStyles();
   const [presu, setPresu] = useState(" ");
   ;
+  // const sr = ScrollReveal({
+  // distance: '60px',
+  // duration: 2800,
+  //reset: false
+  //})
+  const sr = ScrollReveal({
+    distance: '30px',
+    duration:  1500,
+    reset: false
+  })
   const changePresupuesto = (e) => {
     setPresu(e.target.id);
-    sr.reveal(`.hola`, {
-      origin: 'top',
-      interval: 100,
-    })
+    sr.reveal('.hola', { origin: 'left', interval: 100, delay: 50 });
   };
 
   function LayoutContendio(props) {
     switch (props.contenido) {
-      case "Empresas": return <PresupuestoEmpresas></PresupuestoEmpresas>; break;
+      case "Empresas": return <PresupuestoEmpresas ></PresupuestoEmpresas>; break;
       case "Gastronómicos": return <PresupuestoGastronomicos></PresupuestoGastronomicos>; break;
       case "Consorcios": return <PresupuestoConsorcios></PresupuestoConsorcios>; break;
       case "Centros educativos": return <PresupuestoCentrosEdu></PresupuestoCentrosEdu>; break;
@@ -102,14 +113,18 @@ const Presupuestos = (props) => {
               </Typography>
             </Grid>
             <Grid
+
               align="center" item xs={12} sm={6} md={4} lg={4}>
+
               <Button
+
 
                 className={classes.buttons}>
                 <Typography
-                  id="Empresas"
+                  className={classes.typo}
                   onClick={changePresupuesto}
                   align="center"
+                  id="Empresas"
                 >
                   Empresas
                 </Typography>
@@ -119,6 +134,7 @@ const Presupuestos = (props) => {
               <Button className={classes.buttons}>
                 {" "}
                 <Typography
+                  className={classes.typo}
                   id="Gastronómicos"
                   onClick={changePresupuesto}
                   align="center"
@@ -131,6 +147,7 @@ const Presupuestos = (props) => {
               <Button className={classes.buttons}>
                 {" "}
                 <Typography
+                  className={classes.typo}
                   id="Consorcios"
                   onClick={changePresupuesto}
                   align="center"
@@ -143,6 +160,7 @@ const Presupuestos = (props) => {
               <Button className={classes.buttons}>
                 {" "}
                 <Typography
+                  className={classes.typo}
                   id="Centros educativos"
                   onClick={changePresupuesto}
                   align="center"
@@ -155,6 +173,7 @@ const Presupuestos = (props) => {
               <Button className={classes.buttons}>
                 {" "}
                 <Typography
+                  className={classes.typo}
                   id="Hoteles"
                   onClick={changePresupuesto}
                   align="center"
@@ -168,6 +187,7 @@ const Presupuestos = (props) => {
 
 
                 <Typography
+                  className={classes.typo}
                   id="Hogares"
                   onClick={changePresupuesto}
                   align="center"
@@ -196,6 +216,7 @@ const Presupuestos = (props) => {
           <LayoutContendio contenido={presu} />
         </div>
       </div>
+
       <Futer></Futer>
     </React.Fragment>
   );

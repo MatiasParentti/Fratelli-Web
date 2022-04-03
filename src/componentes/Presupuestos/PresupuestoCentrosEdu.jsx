@@ -33,7 +33,15 @@ const PresupuestoCentrosEdu = () => {
 
   const onSubmit = (data, e) => {
     e.preventDefault();
-    firebaseCrear('PresupuestoCentrosEdu', data)
+    const d = new Date();
+    const date = {
+      date: d.toString()
+    };
+    const myData = {
+      ...data,
+      ...date
+    };
+    firebaseCrear('PresupuestoCentrosEdu', myData)
     reset()
     return false;
   }
@@ -66,7 +74,7 @@ const PresupuestoCentrosEdu = () => {
                 </Grid>
                 <Grid align="center" item xs={12} sm={6} md={4} lg={4}>
                   <select className="form-select select_presu" aria-label="Default select example" defaultValue={'DEFAULT'} {...register('tipo')}>
-                    <option value="DEFAULT" disabled  selected  >Tipo de lugar</option>
+                    <option value="DEFAULT" disabled selected  >Tipo de lugar</option>
                     <option value="Colegio">Colegio</option>
                     <option value="Universidad">Universidad</option>
                     <option value="Instituto">Instituto</option>
