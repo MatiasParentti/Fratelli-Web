@@ -44,8 +44,7 @@ const Futer = () => {
                                     {path !== '/' ? (<Link to='/'><a className="footer__link">Nosotros</a></Link>) : (<a href="#about" className="footer__link">Nosotros</a>)}
                                 </li>
                                 <li className="footer__item">
-                                    <Link to='/Servicios'> <a className="footer__link">Servicos</a></Link>
-
+                                    {path !== '/' ? (<Link to='/'><a className="footer__link">Servicios</a></Link>) : (<a href="#discover" className="footer__link">Servicios</a>)}
                                 </li>
                                 <li className="footer__item">
                                     {path !== '/' ? (<Link to='/'><a className="footer__link">Preguntas Frecuentes</a></Link>) : (<a href="#faq" className="footer__link">Preguntas Frecuentes</a>)}

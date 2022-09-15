@@ -88,7 +88,8 @@ const Navmenu = (props) => {
 
                         </li>
 
-                        <li className="nav__item">
+{/* 
+                  <li className="nav__item">
                             {
                                 path !== '/' ?
                                     (
@@ -102,8 +103,11 @@ const Navmenu = (props) => {
                             }
 
                         </li>
+                        */}
+
                         <li className="nav__item">
-                            <Link to='/Servicios'><div className="nav__link">Servicios</div></Link>
+                     {/*        <Link to='/Servicios'><div className="nav__link">Servicios</div></Link>  */}
+                     <a href="#discover" className="nav__link">Servicios</a>
                         </li>
                         <li className="nav__item">
 
@@ -120,12 +124,12 @@ const Navmenu = (props) => {
 
 
                 </div>
-
+{/* 
                 <div > <Link to={'/Cart'}> <IconButton color="inherit" aria-label="show cart items">
                     <Badge badgeContent={basket?.length} color='secondary'><ShoppingCart className={classes.cart} fontSize='medium' color='primary'></ShoppingCart>
                     </Badge>
                 </IconButton></Link> </div>
-
+ */}
                 <div onClick={menuShow} className="nav__toggle" id="nav-toggle">
                     <i className={btn}></i>
                 </div>

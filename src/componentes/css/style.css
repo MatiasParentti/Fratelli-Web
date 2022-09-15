@@ -1,5 +1,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
+@font-face {
+  font-family: 'conthrax-sb';
+  src: local('conthrax-sb'), url(./font/conthrax-sb.ttf) format('truetype');
+}
 
 :root {
   --header-height: 3rem;
@@ -92,6 +96,9 @@ body.riri-sun-line {
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
+
+
+
 
 
 /*========== Button Dark/Light ==========*/
@@ -258,7 +265,8 @@ input {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: transparent;
+  background-color:  var(--white-color);
+  border-radius: 0rem 0rem 1.5rem 1.5rem;
 }
 
 /*=============== NAV ===============*/
@@ -267,13 +275,13 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  
  
 }
 
 .nav__logo,
 .nav__toggle {
-  color: var(--white-color);
+  color: var(--title-color);
 }
 
 .nav__logo {
@@ -414,7 +422,17 @@ input {
 .home__data-title {
   font-size: var(--biggest-font-size);
   font-weight: var(--font-medium);
-  margin-bottom: var(--mb-2-5);
+  font-family: conthrax-sb ;
+  text-transform: uppercase;
+}
+
+
+.titles{
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+  font-family: conthrax-sb ;
+  color: #FFF;
 }
 
 .home__social {
@@ -438,7 +456,7 @@ input {
   right: 0;
   bottom: 1rem;
   width: 228px;
-  
+  display: none;
 }
 
 .home__info-title {
@@ -482,6 +500,7 @@ input {
   overflow: hidden;
   z-index: 1;
   font-family: inherit;
+  border-radius: 3rem;
  }
  
  .button::before {
@@ -577,6 +596,7 @@ border-bottom: 2px solid tomato;
 
 .about__img-overlay {
   overflow: var(--img-hidden);
+  border-radius: 0.25rem;
 }
 
 .about__img-one {
@@ -585,7 +605,7 @@ border-bottom: 2px solid tomato;
 }
 
 .about__img-two {
-  width: 180px;
+  width: 300px;
   
 }
 
@@ -611,8 +631,9 @@ border-bottom: 2px solid tomato;
 .discover__card {
   position: relative;
   width: 280px ;
-  height: 280px;
+  height: 160px;
   overflow: var(--img-hidden);
+  border-radius: 2rem;
 }
 
 .discover__data {
@@ -758,6 +779,7 @@ border-bottom: 2px solid tomato;
 .faq .accordion__container {
   max-width: 40rem;
   margin: 0 auto;
+  
 }
 
 .faq .accordion__container .accordion {
@@ -766,11 +788,13 @@ border-bottom: 2px solid tomato;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
           margin-left: 1rem;
-          margin-right: 1rem;    
+          margin-right: 1rem;  
+          border-radius: 2rem;  
 }
 
 .faq .accordion__container .accordion.active .accordion__heading {
   background: var(--first-color);
+  border-radius: 2rem;
 }
 
 .faq .accordion__container .accordion.active .accordion__heading i {
@@ -794,6 +818,7 @@ border-bottom: 2px solid tomato;
           justify-content: space-between;
   background: var(--title-color);
   cursor: pointer;
+  border-radius: 2rem;
 }
 
 .faq .accordion__container .accordion .accordion__heading h3 {
@@ -818,6 +843,7 @@ border-bottom: 2px solid tomato;
 .subscribe__bg {
   background-color: var(--first-color-second);
   padding: 2.5rem 0;
+  display: none;
 }
 
 .subscribe__title,
@@ -989,6 +1015,7 @@ margin-bottom: 1rem;
   height: 15rem;
   border: 1px solid var(--first-color) ;
   margin-top: 2rem;
+  
 }
 .footer__container {
   row-gap: 5rem;
@@ -1063,13 +1090,11 @@ margin-bottom: 1rem;
 .scrollup {
   display: flex;
   padding: .5rem;
-  font-size: 16px;
   font-weight: 700;
   color: var(--white-color);
-  border: 3px solid  var(--first-color);;
   cursor: pointer;
   position: fixed;
-  background-color: transparent;
+  background-color:#25d366;
   text-decoration: none;
   overflow: hidden;
   z-index: var(--z-tooltip);
@@ -1078,32 +1103,30 @@ margin-bottom: 1rem;
   bottom: -20%;
   opacity: .9;
   transition: .4s;
+  width:60px;
+	height:60px;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  box-shadow: 2px 2px 3px #999;
+  bottom: 5rem;
  }
  
- .scrollup::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color:  var(--first-color);;
-  transform: translateX(-100%);
-  transition: all .3s;
-  z-index: -1;
- }
+ .scrollup:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
+}
  
  .scrollup:hover::before {
   transform: translateX(0);
  }
 
-.scrollup__icon {
-  color: var(--title-color);
-  font-size: 1.2rem;
+ .my-float{
+    margin-top: 3px;
+    margin-left: 10px;
 }
-.scrollup__icon:hover{
-  color: var(--white-color);
- }
+
 
 /* Show scroll */
 .show-scroll {
@@ -1188,12 +1211,12 @@ margin-bottom: 1rem;
   }
 
   .nav__link {
-    color: var(--white-color);
+    color: var(--title-color);
     text-transform: initial;
   }
 
   .nav__link:hover {
-    color: var(--white-color);
+    color: var(--text-color);
   }
 
   .nav__dark {
@@ -1229,9 +1252,7 @@ margin-bottom: 1rem;
     background-color: var(--white-color);
   }
 
-  .scroll-header .nav__link {
-    color: var(--text-color);
-  }
+ 
 
   .scroll-header .active-link {
     color: var(--title-color);
@@ -1363,12 +1384,18 @@ margin-bottom: 1rem;
   }
 
   .about__img-two {
-    width: 290px;
+    width: 400px;
+    border-radius: 0.5rem;
   }
 
   .discover__card {
     width: 300px;
-    height: 300px;
+    height: 200px;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+  .discover__card:hover {
+   translate: 2px;
   }
 
   .discover__data {

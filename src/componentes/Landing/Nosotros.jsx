@@ -22,12 +22,10 @@ const Nosotros = () => {
                     </div>
 
                     <div className="about__img">
-                        <div className="about__img-overlay">
-                            <img src="/img/cabecera1.jpg" alt="" className="about__img-one" />
-                        </div>
+                        
 
                         <div className="about__img-overlay">
-                            <img src="/img/tres.jpeg" alt="" className="about__img-two" />
+                            <img src="/img/tres.jpg" alt="" className="about__img-two" />
                         </div>
                     </div>
                 </div>

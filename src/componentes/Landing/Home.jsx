@@ -32,8 +32,9 @@ const Home = () => {
 
             <div className="home__container container grid">
                 <div className="home__data">
-                    <span className="home__data-subtitle">Manejo integral</span>
-                    <h1 className="home__data-title">FRATELLI<br></br> Control de <b>plagas <br></br></b></h1>
+                   
+                    <h1 className="home__data-title">Calidad humana</h1>
+                    <h2 className="titles" >al servicio del  control de plagas</h2><br></br>
                     {path !== '/' ? (<Link to='/'><a className="button">Saber mas</a></Link>) : (<a href="#about" className="button btn__color">Saber mas</a>)}
 
 

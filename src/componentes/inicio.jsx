@@ -28,9 +28,9 @@ const Inicio = () => {
 
       <Servicios></Servicios>
 
-      <Headerx></Headerx>
+      
 
-      <Videosecsion ></Videosecsion >
+      
 
       <Preguntas></Preguntas>
 
